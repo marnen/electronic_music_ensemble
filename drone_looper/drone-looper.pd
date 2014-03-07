@@ -82,5 +82,6 @@ shift (ms);
 #X connect 37 0 40 0;
 #X connect 38 0 41 0;
 #X connect 40 0 42 0;
+#X connect 41 0 37 0;
 #X connect 43 0 44 1;
 #X connect 44 0 5 1;
