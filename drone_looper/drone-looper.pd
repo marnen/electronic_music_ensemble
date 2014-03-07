@@ -3,7 +3,7 @@
 #X obj 328 11 pddp/dsp;
 #X obj 174 79 s drone-pitch;
 #X obj -113 270 pitchshift~;
-#X floatatom -15 246 5 0 0 0 - - -;
+#X floatatom -23 255 5 0 0 0 - - -;
 #X obj 174 38 init 67;
 #X floatatom 174 59 3 0 0 0 - - -;
 #X msg 170 126 250;
@@ -17,7 +17,7 @@
 #X obj -103 90 r drone-delay;
 #X floatatom -82 246 5 0 0 0 - - -;
 #X obj -110 315 output~;
-#X obj -15 226 init 250;
+#X obj -23 235 init 250;
 #X obj 112 15 notein;
 #X obj 112 38 stripnote;
 #X obj -101 64 delwrite~ drone 5000;
@@ -27,7 +27,7 @@ drone;
 ;
 #X obj 170 200 s drone-delay;
 #X obj 170 178 min 5000;
-#X obj 23 246 comment 0 10 helvetica ? 0 0 0 0 window size for pitch
+#X obj 15 255 comment 0 10 helvetica ? 0 0 0 0 window size for pitch
 shift (ms);
 #X msg 171 287 250;
 #X msg 202 287 500;
@@ -62,13 +62,15 @@ through;
 #X connect 4 0 0 0;
 #X connect 6 0 3 1;
 #X coords 0 -1 1 1 75 40 1 100 80;
-#X restore -82 180 pd get-transposition;
+#X restore -82 191 pd get-transposition;
 #X obj 26 128 r drone-pitch;
 #X obj 171 361 s drone-beat;
 #X obj -182 137 init auto 0;
 #X obj -54 133 r drone-beat;
 #X obj -81 157 metro;
 #X obj -98 134 loadbang;
+#X obj -73 176 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
 #X connect 0 0 21 0;
 #X connect 0 0 39 0;
 #X connect 3 0 17 0;
@@ -108,4 +110,6 @@ through;
 #X connect 44 0 41 0;
 #X connect 45 0 46 1;
 #X connect 46 0 41 0;
+#X connect 46 0 48 0;
 #X connect 47 0 46 0;
+#X connect 48 0 41 0;
