@@ -32,6 +32,8 @@ drone;
 ;
 #X obj 170 200 s drone-delay;
 #X obj 170 178 min 5000;
+#X obj -11 237 comment 0 10 helvetica ? 0 0 0 0 window size for pitch
+shift (ms);
 #X connect 0 0 26 0;
 #X connect 1 0 3 0;
 #X connect 3 0 20 0;
